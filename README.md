@@ -9,11 +9,11 @@ Version: 1.1
 Status: Final Specification
 License: CC BY‑SA 4.0 
 
----
+Blockchain is evolving from wasted energy to cognitive value. Proof of Work burned electricity for random hashes. Proof of Stake rewarded wealth. The next era is Proof of Information: verifiable compute with real-world utility. Nodes no longer just secure a ledger; they act as a decentralized intelligence engine. By using Zero-Knowledge proofs to validate data, filter out noise, and generate predictions, the network reaches consensus through truth, not capital. This is the ultimate infrastructure of the future—a cryptographically secure truth layer built for the AI economy.
 
 ## Abstract
 
-Entropy Protocol defines a consensus mechanism in which network security is derived from the *information value of predictions* rather than from computational expenditure or capital concentration. The right to produce a block and receive emission is earned by the quality of a verifiable forecast about the external world.
+PoI defines a consensus mechanism in which network security is derived from the *information value of predictions* rather than from computational expenditure or capital concentration. The right to produce a block and receive emission is earned by the quality of a verifiable forecast about the external world.
 
 The specification introduces the following mechanisms:
 

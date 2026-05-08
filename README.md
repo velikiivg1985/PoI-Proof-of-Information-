@@ -8,8 +8,8 @@
 Version: 1.1
 Status: Final Specification
 License: CC BY‑SA 4.0 
-
-Blockchain is evolving from wasted energy to cognitive value. Proof of Work burned electricity for random hashes. Proof of Stake rewarded wealth. The next era is Proof of Information: verifiable compute with real-world utility. Nodes no longer just secure a ledger; they act as a decentralized intelligence engine. By using Zero-Knowledge proofs to validate data, filter out noise, and generate predictions, the network reaches consensus through truth, not capital. This is the ultimate infrastructure of the future—a cryptographically secure truth layer built for the AI economy.
+The blockchain of future predictions.
+Consensus algorithms have failed to capture real-world value. PoW wastes power; PoS oligopolizes capital. Proof of Information shifts the paradigm: we secure the network through the production of verifiable truth. Validators are rewarded not for holding tokens, but for the accuracy and entropy of their predictions. By bridging zero-knowledge proofs with strict scoring rules, we turn global compute into a truth-seeking engine. This isn’t just a new blockchain. It’s a decentralized data economy where the ultimate asset is verified, cryptographic information.
 
 ## Abstract
 

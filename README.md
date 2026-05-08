@@ -5,7 +5,9 @@
 # PoI
 ## Proof‑of‑Information Consensus
 
-**Version:** 1.1  
+Version: 1.1
+Status: Final Specification
+License: CC BY‑SA 4.0 
 
 ---
 

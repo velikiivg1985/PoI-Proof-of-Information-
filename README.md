@@ -5,10 +5,6 @@
 # PoI
 ## Proof‑of‑Information Consensus
 
-Version: 1.1
-Status: Final Specification
-License: CC BY‑SA 4.0
-
 
 Consensus algorithms have failed to capture real-world value. PoW wastes power; PoS oligopolizes capital. Proof of Information shifts the paradigm: we secure the network through the production of verifiable truth. Validators are rewarded not for holding tokens, but for the accuracy and entropy of their predictions. By bridging zero-knowledge proofs with strict scoring rules, we turn global compute into a truth-seeking engine. This isn’t just a new blockchain. It’s a decentralized data economy where the ultimate asset is verified, cryptographic information.
 
@@ -494,3 +490,5 @@ The protocol explicitly considers the following attack classes and their counter
 - rotation every 6 months,
 - power to halt emission in an emergency,
 - any council decision can be overturned by the DAO within 7 days.
+
+

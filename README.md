@@ -650,5 +650,4 @@ python dashboard.py --input results/mvp_run_001
 
 
 
-*Document ready for copy/paste deployment.* 🚀
 

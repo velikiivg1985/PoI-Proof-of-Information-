@@ -14,6 +14,7 @@ DOI: 10.5281/zenodo.PoI‑v1.1
 Consensus algorithms have failed to capture real-world value. PoW wastes power; PoS oligopolizes capital. Proof of Information shifts the paradigm: we secure the network through the production of verifiable truth. Validators are rewarded not for holding tokens, but for the accuracy and entropy of their predictions. By bridging zero-knowledge proofs with strict scoring rules, we turn global compute into a truth-seeking engine. This isn’t just a new blockchain. It’s a decentralized data economy where the ultimate asset is verified, cryptographic information.
 
 
+
 # PoI-Core MVP — Minimal Proof-of-Information Consensus
 
 ## Core Principle

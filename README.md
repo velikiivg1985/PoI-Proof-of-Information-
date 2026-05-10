@@ -450,6 +450,8 @@ python dashboard.py --input results/mvp_run_001
 >   
 > We invite rigorous critique, empirical testing, and collaborative iteration. Start with the MVP. Prove the core. Then scale to the full vision.
 
+#PoI #ProofOfInformation #Superintelligence #DecentralizedAI #CollectiveIntelligence #EpistemicBlockchain #zkML #AISafety #ConsensusProtocol #Velikiivg1985 #PoI-Proof-of-Information
+
 *Document version: 1 • Last updated: May 2026 • Maintained by PoI Research Collective*  
 *Repository: https://github.com/velikiivg1985/PoI-Proof-of-Information-*
 

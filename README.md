@@ -52,7 +52,7 @@ For the MVP, event creation and resolution are handled by a centralized oracle o
 
 During each epoch, participants submit a single probability value:
 
-p ∈ [0,1]
+`p ∈ [0,1]`
 
 representing their confidence that the event outcome will be YES.
 
@@ -63,27 +63,18 @@ No zero-knowledge proofs are required in the MVP.
 
 ## 3. Node Weight
 
-Validator influence is calculated once per epoch:
+Validator influence is calculated once per epoch using fixed coefficients:
 
-Weight = a * Reputation + b * Novelty + c * Stake
+`Weight = 0.65 × Reputation + 0.20 × Novelty + 0.15 × Stake`
 
 ### Reputation
-
-Reputation is derived from a rolling average Brier Score over the last N resolved events.
-
-More accurate and better calibrated predictors accumulate higher reputation.
+Reputation is derived from a rolling exponential moving average (EMA) of inverted Brier Scores over the last N resolved events. More accurate and better-calibrated predictors accumulate higher reputation.
 
 ### Novelty
-
-Novelty measures how much a prediction deviates from the network median.
-
-To prevent rewarding random noise, novelty is multiplied by the node’s historical predictive accuracy.
+Novelty measures how much a prediction deviates from the network median. To prevent rewarding random noise, novelty is multiplied by the node’s historical predictive accuracy.
 
 ### Stake
-
-Stake acts primarily as Sybil and spam protection.
-
-For the MVP, this can be replaced with a simple fixed minimum stake shared equally among all participants.
+In the MVP, `Stake` acts strictly as a **binary eligibility threshold** (Sybil and spam filter). It does not linearly scale influence. Capital dominance is intentionally capped to preserve the information-first paradigm.
 
 ---
 
@@ -91,7 +82,7 @@ For the MVP, this can be replaced with a simple fixed minimum stake shared equal
 
 The Top-21 nodes by weight form the validator committee.
 
-Blocks are finalized through a lightweight BFT-style voting round.
+Blocks are finalized through a standard **CometBFT (Tendermint)** BFT voting round. PoI replaces the validator power distribution mechanism, not the underlying consensus engine itself.
 
 Each block contains:
 
@@ -108,11 +99,11 @@ After an event resolves, rewards are distributed according to forecasting accura
 
 A simplified reward formula:
 
-Reward_i = PoolShare * (1 − BrierScore_i) / Σ(1 − BrierScore_j)
+`Reward_i = PoolShare × (1 − BrierScore_i) / Σ(1 − BrierScore_j)`
 
 More accurate predictors receive larger rewards and gain influence in future epochs.
 
-Rewards are distributed with a small delay to reduce manipulation incentives.
+**Important:** Rewards are calculated after resolution and applied to reputation/stake state with a strict **1-epoch delay**. This prevents front-running of committee selection and ensures network influence is earned, not instantly reinvested.
 
 ---
 
@@ -126,6 +117,21 @@ Even in its minimal form, the protocol demonstrates several important properties
 * Consensus becomes tied to predictive accuracy rather than resource ownership.
 
 This transforms the blockchain from a purely transactional system into a decentralized forecasting and verification network.
+
+---
+
+# Validation Criteria (MVP Success Thresholds)
+
+The PoI-Core MVP is considered functionally proven when the following conditions are met on a local devnet (≥50 simulated nodes, 20 epochs):
+
+| Metric | Target | Measurement |
+|--------|--------|-------------|
+| Weight ↔ Accuracy correlation | `R² ≥ 0.75` | Linear regression of epoch weight vs rolling inverse Brier |
+| Sybil resistance | `<5% committee share` for constant-predictors | Nodes submitting `p=0.5` every epoch |
+| Reputation convergence | Stable ranking after `≤8 epochs` | Jensen-Shannon divergence of weight distribution `< 0.05` |
+| Block finalization latency | `<2.5s` (local devnet) | CometBFT `consensus:stats` logs |
+
+Failure to meet ≥3 of these thresholds triggers a review of coefficient weights or EMA smoothing factors before proceeding to v0.2.
 
 ---
 
@@ -163,9 +169,6 @@ Unlike prediction markets or oracle layers built on top of existing chains, PoI 
 The blockchain does not merely store forecasts.
 
 It uses them to determine who earns influence over the network itself.
-
-
-
 
 
 

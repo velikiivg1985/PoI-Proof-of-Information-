@@ -13,6 +13,163 @@ DOI: 10.5281/zenodo.PoI‑v1.1
 
 Consensus algorithms have failed to capture real-world value. PoW wastes power; PoS oligopolizes capital. Proof of Information shifts the paradigm: we secure the network through the production of verifiable truth. Validators are rewarded not for holding tokens, but for the accuracy and entropy of their predictions. By bridging zero-knowledge proofs with strict scoring rules, we turn global compute into a truth-seeking engine. This isn’t just a new blockchain. It’s a decentralized data economy where the ultimate asset is verified, cryptographic information.
 
+
+# PoI-Core MVP — Minimal Proof-of-Information Consensus
+
+## Core Principle
+
+> The right to produce blocks should belong not to those who burn the most electricity or control the most capital, but to those whose forecasts are historically the most accurate and well-calibrated.
+
+PoI-Core is a minimal experimental blockchain architecture designed to demonstrate a new form of consensus: information-weighted consensus.
+
+Instead of Proof-of-Work or traditional Proof-of-Stake, validator influence emerges from predictive performance.
+
+The goal of the MVP is not to solve every aspect of decentralized forecasting, but to prove a single idea:
+
+> A blockchain can finalize blocks using forecasting accuracy as its primary security primitive.
+
+---
+
+# Minimal Architecture
+
+## 1. Binary Events
+
+The network operates on simple binary prediction questions such as:
+
+* “Will BTC exceed $100k before June 1?”
+* “Will inflation remain above 5% next quarter?”
+
+Each event resolves to either:
+
+* YES = 1
+* NO = 0
+
+For the MVP, event creation and resolution are handled by a centralized oracle or a small trusted committee.
+
+---
+
+## 2. Predictors
+
+During each epoch, participants submit a single probability value:
+
+p ∈ [0,1]
+
+representing their confidence that the event outcome will be YES.
+
+Each prediction is signed using standard Ed25519 signatures.
+No zero-knowledge proofs are required in the MVP.
+
+---
+
+## 3. Node Weight
+
+Validator influence is calculated once per epoch:
+
+Weight = a * Reputation + b * Novelty + c * Stake
+
+### Reputation
+
+Reputation is derived from a rolling average Brier Score over the last N resolved events.
+
+More accurate and better calibrated predictors accumulate higher reputation.
+
+### Novelty
+
+Novelty measures how much a prediction deviates from the network median.
+
+To prevent rewarding random noise, novelty is multiplied by the node’s historical predictive accuracy.
+
+### Stake
+
+Stake acts primarily as Sybil and spam protection.
+
+For the MVP, this can be replaced with a simple fixed minimum stake shared equally among all participants.
+
+---
+
+## 4. Consensus
+
+The Top-21 nodes by weight form the validator committee.
+
+Blocks are finalized through a lightweight BFT-style voting round.
+
+Each block contains:
+
+* prediction submissions,
+* event identifiers,
+* updated reputation scores,
+* validator signatures.
+
+---
+
+## 5. Reward Distribution
+
+After an event resolves, rewards are distributed according to forecasting accuracy.
+
+A simplified reward formula:
+
+Reward_i = PoolShare * (1 − BrierScore_i) / Σ(1 − BrierScore_j)
+
+More accurate predictors receive larger rewards and gain influence in future epochs.
+
+Rewards are distributed with a small delay to reduce manipulation incentives.
+
+---
+
+# What This MVP Demonstrates
+
+Even in its minimal form, the protocol demonstrates several important properties:
+
+* The network operates without Proof-of-Work.
+* Security does not depend on pure capital dominance.
+* Validator selection emerges from informational performance.
+* Consensus becomes tied to predictive accuracy rather than resource ownership.
+
+This transforms the blockchain from a purely transactional system into a decentralized forecasting and verification network.
+
+---
+
+# Intentionally Excluded from the MVP
+
+The following mechanisms are intentionally postponed for later iterations:
+
+* zkPoI and zkPoDP
+* Adaptive clustering
+* Distributed oracle resolution
+* CRPS scoring
+* Energy arbitration
+* Cassandra rewards
+* Proving Registry
+* Circuit Breakers
+
+The purpose of PoI-Core is simplicity, testability, and proof of paradigm shift — not full protocol completeness.
+
+---
+
+# Why This Matters
+
+Most blockchain systems still derive security from resource concentration:
+
+* computational power,
+* capital ownership,
+* or validator accumulation.
+
+PoI explores a different direction:
+
+> security emerging from the quality of information itself.
+
+Unlike prediction markets or oracle layers built on top of existing chains, PoI places predictive accuracy directly inside the consensus mechanism.
+
+The blockchain does not merely store forecasts.
+
+It uses them to determine who earns influence over the network itself.
+
+
+
+
+
+
+
 ## Abstract
 
 PoI defines a consensus mechanism in which network security is derived from the *information value of predictions* rather than from computational expenditure or capital concentration. The right to produce a block and receive emission is earned by the quality of a verifiable forecast about the external world.

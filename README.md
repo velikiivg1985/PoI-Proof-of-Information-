@@ -1,12 +1,11 @@
 
-
 # Proof-of-Information (PoI) Consensus Protocol
 ## Complete Specification: MVP + Production
 
-> **Version:** 1  
+> **Version:** 1 
 > **Status:** Specification Complete • MVP Ready for Testing  
 > **License:** CC BY‑SA 4.0  
-> **DOI:** 10.5281/zenodo.PoI‑v1 
+> **DOI:** 10.5281/zenodo.PoI‑v1  
 > **Core Thesis:** *Consensus driven by predictive information quality, not resource expenditure.*
 
 ---
@@ -43,7 +42,6 @@ This principle redefines PoI’s operational boundary: AI agents are not externa
 
 PoI is not a database for AI to read. It is an **epistemic operating system** where intelligence is a consensus primitive, and collective accuracy continuously shapes validator influence, block production, and emission distribution.
 
-
 ### 🔄 Evolutionary Trajectory: From Human-Guided to Truth-Autonomous
 
 > *Clarification on long-term governance and the role of AI.*
@@ -66,7 +64,8 @@ PoI is designed with an **evolutionary architecture** that anticipates a gradual
 > By anchoring consensus in *verifiable truth* rather than *voting power*, PoI creates a system where influence is earned through alignment with reality — not through coercion, capital, or manipulation. This provides a technical substrate for preserving human agency: when AI manages the *mechanics* of consensus, humans remain free to define the *questions*, interpret the *meaning*, and govern the *values*.
 
 *In short: PoI does not hand control to AI. It hands control to **truth** — and uses AI as the most precise instrument currently available to measure it.*
-```
+
+---
 
 ## 🏗️ Two-Track Architecture Overview
 
@@ -451,5 +450,6 @@ python dashboard.py --input results/mvp_run_001
 >   
 > We invite rigorous critique, empirical testing, and collaborative iteration. Start with the MVP. Prove the core. Then scale to the full vision.
 
-*Document version: 1.1 • Last updated: May 2026 • Maintained by PoI Research Collective*  
+*Document version: 1 • Last updated: May 2026 • Maintained by PoI Research Collective*  
 *Repository: https://github.com/velikiivg1985/PoI-Proof-of-Information-*
+

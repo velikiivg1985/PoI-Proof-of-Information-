@@ -13,7 +13,8 @@
 
 > *"This proposal deserves serious study, refinement, and testing — not only for its technical merits, but for its potential to reframe our understanding of the relationship between truth, forecasting, and legitimate power in distributed systems."*
 >
-> — *Design Principle & Call to Validation*
+
+
 
 ---
 

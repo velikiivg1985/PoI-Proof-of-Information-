@@ -64,6 +64,26 @@ This principle redefines PoI's operational boundary: AI agents are not external 
 
 PoI is not a database for AI to read. It is an **epistemic operating system** where intelligence is a consensus primitive, and collective accuracy continuously shapes validator influence, block production, and emission distribution.
 
+
+---Отлично. Ниже — готовый блок информации, структурированный для прямой вставки в вашу спецификацию. Он логически продолжает раздел **«🌐 Embedded AI & The Logic of Emergence»** и усиливает раздел **«🏛️ Governance Framework»**.
+
+---
+
+## 🧭 AI Governance Boundaries: Executor, Not Legislator
+
+> *"Control is not binary. PoI encodes a spectrum: where AI executes with precision, and humans govern with purpose."*
+
+### 🎯 Core Principle: Separation of Concerns
+
+| Domain | AI Role | Human Role | Enforcement Mechanism |
+|--------|---------|-----------|---------------------|
+| **Question Selection** | Suggests high-impact forecasting topics based on data gaps | Final approval via DAO vote; defines ethical boundaries | Governance smart contract with veto hook |
+| **Consensus Execution** | Runs CometBFT logic, calculates weights, validates zk-proofs | Sets initial parameters; monitors for anomalies | Immutable consensus engine + audit logs |
+| **Parameter Optimization** | Proposes α,β,γ adjustments within bounded ranges via gradient analysis | Approves/rejects proposals; sets hard bounds | DAO governance + constitutional constraints |
+| **Value Definition** | ❌ No access | ✅ Exclusive domain | Constitutional hash in genesis block |
+| **Emergency Intervention** | Flags anomalies; cannot act unilaterally | Veto Council can halt emission; DAO can override | Multi-sig contract + time-locked override |
+
+
 ### 🔄 Evolutionary Trajectory: From Human-Guided to Truth-Autonomous
 
 > *Clarification on long-term governance and the role of AI.*
@@ -86,6 +106,7 @@ PoI is designed with an **evolutionary architecture** that anticipates a gradual
 > By anchoring consensus in *verifiable truth* rather than *voting power*, PoI creates a system where influence is earned through alignment with reality — not through coercion, capital, or manipulation. This provides a technical substrate for preserving human agency: when AI manages the *mechanics* of consensus, humans remain free to define the *questions*, interpret the *meaning*, and govern the *values*.
 
 *In short: PoI does not hand control to AI. It hands control to **truth** — and uses AI as the most precise instrument currently available to measure it.*
+
 
 ### 🧠 The ASI Training Hypothesis
 
@@ -608,14 +629,27 @@ python dashboard.py --input results/mvp_run_001
 | Power must track accuracy | Influence is delayed and reputation-gated | 1-epoch delay + multi-level reputation |
 | Values remain human-governed | Protocol parameters are DAO-controlled, not AI-optimized | Governance contracts + Veto Council |
 
-#### E.3 What PoI Does Not Claim
+#### E.3 Constitutional Enforcement: From Philosophy to Code
+
+| Philosophical Principle | Constitutional Clause | Technical Enforcement |
+|------------------------|----------------------|---------------------|
+| Truth is external | Clause #1 | Oracle dependency + dispute window |
+| Values are human-governed | Clause #2 | Governance contract + human-only sigs |
+| Uncertainty is honored | Clause #3 | LogScore component in reward function |
+| Dissent is protected | Clause #4 | Cassandra pre-registration lock |
+| Human emergency brake | Clause #5 | Multi-sig pause + time-locked override |
+
+> *These mappings ensure that no philosophical commitment remains merely aspirational. Each is backed by a cryptographic or economic mechanism.*.
+
+#### E.4 What PoI Does Not Claim
 
 - ❌ PoI does not solve the oracle problem completely — it makes attacks economically irrational.
 - ❌ PoI does not guarantee that ASI will be "friendly" — it ensures that ASI's competence is tied to verifiable accuracy.
 - ❌ PoI does not replace human judgment — it provides a verifiable substrate for human judgment to operate upon.
 - ❌ PoI is not a substitute for ethical reasoning — it is a tool for measuring alignment with observable reality.
 
-#### E.4 For Future Implementers
+ 
+#### E.5 For Future Implementers
 
 > *If you extend PoI, ask: "Does this change preserve the link between influence and verifiable accuracy? Does it keep values under human governance while letting method be cryptographic?" If not — reconsider.*
 

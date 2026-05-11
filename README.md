@@ -5,7 +5,7 @@
 > **Version:** 1(PIntegration)  
 > **Status:** Specification Complete • MVP Ready for Testing  
 > **License:** CC BY‑SA 4.0  
-> **DOI:**https://doi.org/10.5281/zenodo.20118532
+> https://doi.org/10.5281/zenodo.20118532
 > 
 > **Core Thesis:** *Consensus driven by predictive information quality, not resource expenditure.*
 
